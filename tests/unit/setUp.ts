@@ -1,2 +1,6 @@
-import VueTestUtils from "@vue/test-utils";
-;(VueTestUtils.config.mocks as any)['$t'] = (key: string) => key
+import { config } from "@vue/test-utils";
+
+config.mocks = {
+  $t: (key: string) => key
+};
+config.logModifiedComponents = false;
